@@ -1,7 +1,6 @@
-package com.ME.ChallLit.Service;
+package com.ME.ChallLit.Repository;
 
 import com.ME.ChallLit.Entity.Autores;
-import com.ME.ChallLit.Entity.Libros;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

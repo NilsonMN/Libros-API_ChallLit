@@ -1,4 +1,4 @@
-package com.ME.ChallLit.Service;
+package com.ME.ChallLit.Repository;
 
 import com.ME.ChallLit.Entity.Libros;
 import org.springframework.data.jpa.repository.JpaRepository;

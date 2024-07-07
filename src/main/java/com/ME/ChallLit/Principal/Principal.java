@@ -1,10 +1,10 @@
 package com.ME.ChallLit.Principal;
 
 import com.ME.ChallLit.Entity.*;
-import com.ME.ChallLit.Service.AutoresRepository;
+import com.ME.ChallLit.Repository.AutoresRepository;
 import com.ME.ChallLit.Service.ConsumoAPI;
 import com.ME.ChallLit.Service.ConvierteDatos;
-import com.ME.ChallLit.Service.LibrosRepository;
+import com.ME.ChallLit.Repository.LibrosRepository;
 import java.util.*;
 import java.util.stream.Collectors;
 

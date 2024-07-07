@@ -1,9 +1,8 @@
 package com.ME.ChallLit;
 
 import com.ME.ChallLit.Principal.Principal;
-import com.ME.ChallLit.Service.AutoresRepository;
-import com.ME.ChallLit.Service.LibrosRepository;
-import com.sun.tools.javac.Main;
+import com.ME.ChallLit.Repository.AutoresRepository;
+import com.ME.ChallLit.Repository.LibrosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
