@@ -1,9 +1,6 @@
 package com.ME.ChallLit.Entity;
 
 import jakarta.persistence.*;
-
-import java.time.LocalDate;
-import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,8 +11,8 @@ public class Autores {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private LocalDate birth_year;
-    private LocalDate death_year;
+    private String birth_year;
+    private String death_year;
 
     @ManyToMany(mappedBy = "autores", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Libros> libros = new ArrayList<>();
@@ -25,20 +22,22 @@ public class Autores {
 
     public Autores(DatosAutor datosAutor){
         this.name = datosAutor.name();
-        try {
-            this.birth_year = LocalDate.parse(datosAutor.birth_year());
+        /*try {
+            this.birth_year = Date.parse(datosAutor.birth_year());
         } catch (DateTimeParseException e) {
-            this.birth_year = LocalDate.ofEpochDay(0);
+            this.birth_year = Date.ofEpochDay(0);
         }
         try {
             this.death_year = LocalDate.parse(datosAutor.death_year());
         } catch (DateTimeParseException e) {
             this.death_year = LocalDate.ofEpochDay(0);
         }
+         */
+        this.birth_year = datosAutor.birth_year();
+        this.death_year = datosAutor.death_year();
     }
 
-    // Getters y setters omitidos para brevedad
-
+    //get and set
     public Long getId() {
         return id;
     }
@@ -55,19 +54,19 @@ public class Autores {
         this.name = name;
     }
 
-    public LocalDate getBirth_year() {
+    public String getBirth_year() {
         return birth_year;
     }
 
-    public void setBirth_year(LocalDate birth_year) {
+    public void setBirth_year(String birth_year) {
         this.birth_year = birth_year;
     }
 
-    public LocalDate getDeath_year() {
+    public String getDeath_year() {
         return death_year;
     }
 
-    public void setDeath_year(LocalDate death_year) {
+    public void setDeath_year(String death_year) {
         this.death_year = death_year;
     }
 
@@ -85,6 +84,6 @@ public class Autores {
                 ", name='" + name + '\'' +
                 ", birth_year=" + birth_year +
                 ", death_year=" + death_year +
-                '}';
+                "}\n";
     }
 }

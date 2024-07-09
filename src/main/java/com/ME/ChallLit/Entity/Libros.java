@@ -83,6 +83,6 @@ public class Libros {
                 ", languages=" + languages +
                 ", download_count=" + download_count +
                 ", autores=" + autores +
-                '}';
+                "}\n";
     }
 }
